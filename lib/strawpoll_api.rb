@@ -3,7 +3,7 @@ require 'net/http'
 
 class StrawPoll
 	attr_accessor :title, :multi, :perm, :options 
-	attr_reader :api, :id, :leader, :loser, :link
+	attr_reader :api, :id, :leader, :votes, :link
 
 	def initialize title, *options
 		@title = title
@@ -13,7 +13,7 @@ class StrawPoll
 		@api = 'http://strawpoll.me/api/v2/'
 		@id = nil
 		@leader = nil
-		@loser = nil
+		@votes = nil
 		@link = nil
 		@results = nil
 	end
@@ -46,9 +46,11 @@ class StrawPoll
 		url = URI "http://strawpoll.me/api/v2/#{id}"
 		resp = Net::HTTP.get(url)
 		result = JSON.parse(resp)['votes']
-		JSON.parse(resp)['options'][result.index(result.max)]
+		winner = JSON.parse(resp)['options'][result.index(result.max)]
 		if id == @id
-			p 'hi'
+			@leader = winner
+			@votes = result
 		end
+		winner
 	end
 end
