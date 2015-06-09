@@ -3,10 +3,10 @@ require 'net/http'
 
 ##
 # This class stores a poll instance that can interact with www.strawpoll.me
-# Creates a poll object which you can customize and then 
+# Creates a poll object which you can customize and then  
 # publish online.
 #
-# An ArgumentError is raised if you have less than two
+# An ArgumentError is raised if you have less than two  
 # options in your poll
 class StrawPoll
 	##
@@ -17,7 +17,7 @@ class StrawPoll
 
 	##
 	# These attributes are internally use to track state
-	# and provide some quickyl accesible features from online polls
+	# and provide some quickly accessible features from online polls
 
 	attr_reader :api, :id, :leader, :votes, :link, :results
 
@@ -43,11 +43,11 @@ class StrawPoll
 	end
 
 	##
-	# Publishes poll online and setups links for distribution
+	# Publishes poll online and setup links for distribution
 	#
 	# Returns raw HTTP body
 	#
-	# An ArgumentError is raised if title is remove or options are
+	# An ArgumentError is raised if title is remove or options are  
 	# reduced below 2
 
 	def create!
@@ -67,7 +67,7 @@ class StrawPoll
 	end
 
 	##
-	# Retrieves generic poll info. Defaults to poll instance but
+	# Retrieves generic poll info. Defaults to poll instance but  
 	# can be pointed at any poll by using it's ID number
 	#
 	# Returns raw HTTP body
@@ -81,7 +81,7 @@ class StrawPoll
 	end
 
 	##
-	# Retrieves options with most votes. Defaults to poll instance but
+	# Retrieves options with most votes. Defaults to poll instance but  
 	# can be pointed at any poll by using it's ID number
 	#
 	# Returns String of winning option, setups up internal states for instance
