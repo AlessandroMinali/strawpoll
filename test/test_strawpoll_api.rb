@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require '../lib/strawpoll_api'
+require_relative '../lib/strawpoll_api'
 
 describe "StrawPoll new" do
 

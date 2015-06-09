@@ -36,13 +36,13 @@ class StrawPoll
 	end
 
 	def view id=@id
-		raise ArgumentError unless id.is_a? Integer
+		raise ArgumentError unless id.is_a? Fixnum
 		url = URI "#{@api}#{id}"
 		resp = Net::HTTP.get(url)
 	end
 
 	def winner id=@id
-		raise ArgumentError unless id.is_a? Integer
+		raise ArgumentError unless id.is_a? Fixnum
 		url = URI "#{@api}#{id}"
 		resp = Net::HTTP.get(url)
 		result = JSON.parse(resp)['votes']
@@ -53,4 +53,4 @@ class StrawPoll
 		end
 		winner
 	end
-end
+end	

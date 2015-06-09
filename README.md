@@ -43,3 +43,10 @@ poll.winner
 #or specifiy a poll besides your own
 poll.winner 1234
 ```
+
+##Tests
+
+To run tests
+```
+ruby ./test/test_strawpoll_api.rb
+```
