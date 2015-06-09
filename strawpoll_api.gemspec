@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'strawpoll_api'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.date        = '2015-06-08'
   s.summary     = "A Ruby interface to the Strawpoll"
   s.description = "A Ruby interface to the Strawpoll API. http://strawpoll.me/"
