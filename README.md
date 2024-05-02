@@ -32,7 +32,7 @@ View poll status
 ```
 poll.view
 
-#or specifiy a poll besides your own
+# or specifiy a poll besides your own
 poll.view 1234
 ```
 
@@ -40,11 +40,11 @@ Get the winning result
 ```
 poll.winner
 
-#or specifiy a poll besides your own
+# or specifiy a poll besides your own
 poll.winner 1234
 ```
 
-##Tests
+## Tests
 
 To run tests
 ```
